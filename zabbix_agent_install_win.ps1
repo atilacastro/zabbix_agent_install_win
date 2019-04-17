@@ -1,5 +1,7 @@
 # Begin of script
 
+# Variables
+param($bucket)
 # Go to de directory zabbix
 cd C:\
 mkdir zabbix
@@ -9,7 +11,7 @@ cd zabbix
 wget "https://www.zabbix.com/downloads/3.4.6/zabbix_agents_3.4.6.win.zip" -outfile "zabbix_agents_3.4.6.win.zip"
 unzip zabbix_agents_3.4.6.win.zip
 # Download of .conf at a bucket or another repository
-wget "https://s3.amazonaws.com/bucket/zabbix_agentd.win.conf" -outfile "zabbix_agentd.win.conf"
+wget "https://s3.amazonaws.com/$bucket/zabbix_agentd.win.conf" -outfile "zabbix_agentd.win.conf"
 
 # Move files
 cd C:\zabbix\bin\win64
