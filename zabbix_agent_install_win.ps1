@@ -2,6 +2,7 @@
 
 # Variables
 param($bucket)
+
 # Go to de directory zabbix
 cd C:\
 mkdir zabbix
